@@ -2,3 +2,8 @@ resources:
   - namespace.yaml
   - ../base
 namespace: production
+patchesJson6902:
+  - path: annotate_image.yaml
+    target:
+      kind: Application
+      name: weather-backend
