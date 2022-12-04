@@ -5,6 +5,8 @@ metadata:
 spec:
   project: default
   source:
+    plugin:
+      name: kustomize-build-with-helm
     repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
     path: argocd
     targetRevision: main

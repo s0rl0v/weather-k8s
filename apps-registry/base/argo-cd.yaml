@@ -8,6 +8,8 @@ spec:
     repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
     path: argocd
     targetRevision: main
+    plugin:
+      name: kustomize-build-with-helm
   destination:
     namespace: argocd
     name: in-cluster
