@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: weather-backend
+  namespace: development
+spec:
+  project: default
+  source:
+    chart: weather-backend
+    repoURL: https://github.com/s0rl0v/weather-app
+    targetRevision: 0.0.1
+    helm:
+      releaseName: weather-backend
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: development
