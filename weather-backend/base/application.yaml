@@ -9,6 +9,8 @@ spec:
     path: chart
     repoURL: "https://github.com/s0rl0v/weather-app.git"
     targetRevision: main
+    helm:
+      releaseName: weather-backend
   destination:
     server: "https://kubernetes.default.svc"
     namespace: development
