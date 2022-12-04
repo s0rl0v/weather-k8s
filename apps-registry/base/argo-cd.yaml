@@ -10,7 +10,7 @@ spec:
     targetRevision: main
   destination:
     namespace: argocd
-    name: https://kubernetes.default.svc
+    name: in-cluster
   syncPolicy:
     automated: {}
     syncOptions:

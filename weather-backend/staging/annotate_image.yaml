@@ -1,5 +1,0 @@
-- {
-    op: add,
-    path: "/metadata/annotations/argocd-image-updater.argoproj.io~1image-list",
-    value: "092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:staging",
-  }

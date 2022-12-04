@@ -3,3 +3,11 @@ kind: Kustomization
 
 resources:
   - https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/master/manifests/install.yaml
+
+helmCharts:
+  - name: argocd-image-updater
+    repo: https://argoproj.github.io/argo-helm
+    version: 0.8.1
+    releaseName: argocd-image-updater
+    namespace: argocd
+    valuesFile: values.yaml
