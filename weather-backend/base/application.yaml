@@ -6,11 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    chart: weather-backend
-    repoURL: https://github.com/s0rl0v/weather-app
-    targetRevision: 0.0.1
-    helm:
-      releaseName: weather-backend
+    path: chart
+    repoURL: "https://github.com/s0rl0v/weather-app.git"
+    targetRevision: main
   destination:
     server: "https://kubernetes.default.svc"
     namespace: development
