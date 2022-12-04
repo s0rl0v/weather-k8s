@@ -5,5 +5,6 @@ resources:
   - base/argo-cd.yaml
   - base/nginx-ingress.yaml
   - base/argocd-image-updater.yaml
+  - base/weather-app.yaml
 
 namespace: argocd
