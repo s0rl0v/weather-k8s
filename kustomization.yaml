@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - base/applications.yaml
-  - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.2.4
+  - https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.5.3
 
 patchesJson6902:
   - path: overlays/deploy-command.yaml
