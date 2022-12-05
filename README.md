@@ -6,6 +6,7 @@ This repository contains manifests to boostrap kubernetes cluster with self-mana
 
 Kustomization manifests are used to compose the desired configuration.
 
+Helm chart for `weather-backend` application is [here](/weather-backend/charts/weather-backend/Chart.yaml)
 
 # Usage
 
