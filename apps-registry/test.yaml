@@ -1,12 +1,10 @@
-apiVersion: kubernetes-client.io/v1
+apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  labels:
-    app.kubernetes.io/instance: weather-backend
   name: weather-backend
   namespace: development
 spec:
-  backendType: systemManager
+  backendType: systemsManager
   data:
     - key: /sorlov/weather/OWM_API_KEY
       name: apikey
