@@ -1,0 +1,13 @@
+installCRDs: "true"
+
+serviceAccount:
+  # -- Specifies whether a service account should be created.
+  create: true
+  # -- Annotations to add to the service account.
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::092592202483:role/ExternalSecretsRole"
+  # -- Extra Labels to add to the service account.
+  extraLabels: {}
+  # -- The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template.
+  name: "external-secrets"
