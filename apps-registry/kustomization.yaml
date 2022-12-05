@@ -7,6 +7,5 @@ resources:
   - base/argocd-image-updater.yaml
   - base/weather-app.yaml
   - base/aws-load-balancer-controller.yaml
-  - overlay/ingress-class.yaml
 
 namespace: argocd
