@@ -52,6 +52,8 @@ spec:
                   name: {{ include "weather-backend.fullname" . }}
                   key: {{ include "weather-backend.fullname" . }}
                   optional: false
+            - name: ENVIRONMENT
+              value: {{ .Release.Namespace }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
 
