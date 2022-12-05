@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:386f5372aebccc865eac3fe2b4f9a56e1c2a328e
+  repository: 092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
