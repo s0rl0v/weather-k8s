@@ -3,7 +3,9 @@ kind: Application
 metadata:
   name: weather-backend
   annotations:
-    argocd-image-updater.argoproj.io/image-list: 092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:development
+    argocd-image-updater.argoproj.io/image-list: "weather=092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:development"
+    argocd-image-updater.argoproj.io/weather.update-strategy: "latest"
+    argocd-image-updater.argoproj.io/weather.force-update: "true"
 spec:
   project: default
   source:
