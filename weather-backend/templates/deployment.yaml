@@ -50,7 +50,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ include "weather-backend.fullname" . }}
-                  key: apikey
+                  key: {{ include "weather-backend.fullname" . }}
                   optional: false
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
