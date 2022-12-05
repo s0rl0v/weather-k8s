@@ -4,6 +4,8 @@
 
 replicaCount: 1
 
+ssm_secret_path: "/sorlov/weather/OWM_API_KEY"
+
 image:
   repository: 092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend
   pullPolicy: IfNotPresent
