@@ -1,0 +1,31 @@
+replicaCount: 1
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::${var.aws_account}:role/${module.aws-lb-controller-irsa.iam_role_name}"
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: "aws-load-balancer-controller"
+  # Automount API credentials for a Service Account.
+  automountServiceAccountToken: true
+  # List of image pull secrets to add to the Service Account.
+  imagePullSecrets:
+    # - name: docker
+
+nodeSelector:
+  node-type: general
+
+# The name of the Kubernetes cluster. A non-empty value is required
+clusterName: "sorlov-sandbox"
+
+# cluster contains configurations specific to the kubernetes cluster
+cluster:
+  # Cluster DNS domain (required for requesting TLS certificates)
+  dnsDomain: cluster.local
+
+# The ingress class this controller will satisfy. If not specified, controller will match all
+# ingresses without ingress class annotation and ingresses of type alb
+ingressClass: alb

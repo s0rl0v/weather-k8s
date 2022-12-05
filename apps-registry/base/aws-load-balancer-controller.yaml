@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aws-load-balancer-controller
+spec:
+  project: default
+  source:
+    path: aws-load-balancer-controller
+    repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
+    targetRevision: main
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
