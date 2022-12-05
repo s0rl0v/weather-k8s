@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: weather-backend
+  name: weather-backend-development
   annotations:
     argocd-image-updater.argoproj.io/image-list: "weather=092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:development"
     argocd-image-updater.argoproj.io/weather.update-strategy: "latest"
@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
-    path: weather-backend
+    path: weather-backend/development
     targetRevision: main
   destination:
     namespace: development

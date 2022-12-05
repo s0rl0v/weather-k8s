@@ -5,7 +5,6 @@ resources:
   - base/argo-cd.yaml
   - base/nginx-ingress.yaml
   - base/argocd-image-updater.yaml
-  - base/weather-app.yaml
   - base/aws-load-balancer-controller.yaml
   - base/external-secrets.yaml
 

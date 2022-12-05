@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: weather-backend-production
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: "weather=092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:production"
+    argocd-image-updater.argoproj.io/weather.update-strategy: "latest"
+    argocd-image-updater.argoproj.io/weather.force-update: "true"
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
+    path: weather-backend/production
+    targetRevision: main
+  destination:
+    namespace: production
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
