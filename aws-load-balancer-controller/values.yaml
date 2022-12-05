@@ -5,7 +5,7 @@ serviceAccount:
   create: true
   # Annotations to add to the service account
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::${var.aws_account}:role/${module.aws-lb-controller-irsa.iam_role_name}"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::092592202483:role/AmazonEKSLoadBalancerControllerRole"
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "aws-load-balancer-controller"
