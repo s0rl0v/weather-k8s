@@ -9,7 +9,8 @@ spec:
     repoURL: "https://argoproj.github.io/argo-helm"
     targetRevision: v0.12.0
     helm:
-      valueFiles: values-override.yaml
+      valueFiles:
+        - values-override.yaml
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
