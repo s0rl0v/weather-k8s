@@ -45,15 +45,15 @@ spec:
             httpGet:
               path: /health
               port: 8080
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
           env:
             - name: OWM_API_KEY
               valueFrom:
                 secretKeyRef:
-                  name: { { include "weather-backend.fullname" . } }
+                  name: {{ include "weather-backend.fullname" . }}
                   key: apikey
                   optional: false
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
