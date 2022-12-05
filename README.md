@@ -1,6 +1,11 @@
 # ArgoCD configurations repo
 
-This repository contains all the manifests for kubernetes cluster, bootstrap and application.
+This repository contains manifests to boostrap kubernetes cluster with self-managing ArgoCD as well as with AWS Load Balancer controller, External Secrets, ArgoCD image uploader. Weather-app deployment also happens there.
+
+`apps-registry` directory contains ArgoCD apps, other respective folders contain configurations for the apps deployment.
+
+Kustomization manifests are used to compose the desired configuration.
+
 
 # Usage
 
