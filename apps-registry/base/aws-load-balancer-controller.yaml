@@ -9,7 +9,7 @@ spec:
     repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
     targetRevision: main
   destination:
-    namespace: argocd
+    namespace: kube-system
     server: https://kubernetes.default.svc
   syncPolicy:
     automated: {}
