@@ -1,10 +1,13 @@
 # ArgoCD configurations repo
 
-This repository contains manifests to boostrap kubernetes cluster with:
+This repository contains ArgiCD configuration scripts to boostrap kubernetes cluster with:
 * self-managing ArgoCD
 * AWS Load Balancer controller
 * External Secrets
 * ArgoCD image uploader
+* Kube-prometheus stack
+* Cluster autoscaler
+* Metrics server
 * [Weather-app](/https://github.com/s0rl0v/weather-app) deployment also happens there.
 
 `apps-bootstrap` directory contains ArgoCD apps, `apps-live` directory is dedicated for workloads.
