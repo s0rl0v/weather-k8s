@@ -14,10 +14,7 @@ spec:
     helm:
       values: |
         controller:
-          autoscaling:
-            enabled: true
-            minReplicas: 1
-            maxReplicas: 3
+          replicaCount: 1
   ignoreDifferences:
     - group: autoscaling
       kind: HorizontalPodAutoscaler
