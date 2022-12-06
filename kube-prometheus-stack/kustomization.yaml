@@ -3,6 +3,7 @@ resources:
 - ./resources/argocd-server-metrics-servicemonitor.yaml
 - ./resources/argocd-repo-server-metrics-servicemonitor.yaml
 - ./resources/argocd-notifications-controller-metrics-servicemonitor.yaml
+- ./resources/weather-backend-servicemonitor.yaml
 - ./resources/grafana-ingress.yaml
 
 helmCharts:
