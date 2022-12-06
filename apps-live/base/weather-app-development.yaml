@@ -4,6 +4,8 @@ metadata:
   name: weather-backend-development
   annotations:
     argocd-image-updater.argoproj.io/image-list: "weather=092592202483.dkr.ecr.us-east-1.amazonaws.com/weather-backend:development"
+    argocd-image-updater.argoproj.io/weather.allow-tags: regexp:^development$
+    argocd-image-updater.argoproj.io/weather.update-strategy: digest
     argocd-image-updater.argoproj.io/weather.force-update: "true"
 spec:
   project: default
