@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus-operator
+  name: kube-prometheus-stack
 spec:
   project: default
   source:
-    path: prometheus-operator
+    path: kube-prometheus-stack
     repoURL: "https://github.com/s0rl0v/weather-k8s-deployments.git"
     targetRevision: main
   destination:
