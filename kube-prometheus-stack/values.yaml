@@ -1,0 +1,7 @@
+prometheusOperator:
+  namespaces:
+    releaseNamespace: true
+    additional:
+      - development
+      - staging
+      - production
