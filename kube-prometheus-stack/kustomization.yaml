@@ -23,14 +23,5 @@ configMapGenerator:
   files:
     - dashboard.json
 
-patchesJson6902:
-- target:
-    name: kube-prometheus-stack-grafana
-    namespace: monitoring
-    group:
-    version: v1
-    kind: Secret
-  path: overlays/prometheus-operator-grafana-secret.yaml
-
 patchesStrategicMerge:
 - overlays/prometheus-operator-grafana-cm.yaml
