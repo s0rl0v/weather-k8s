@@ -22,6 +22,9 @@ configMapGenerator:
 - name: argocd-dashboard-cm
   files:
     - dashboard.json
+- name: weather-app-dashboard-cm
+  files:
+    - go_dashboard.json
 
 patchesStrategicMerge:
 - overlays/prometheus-operator-grafana-cm.yaml
