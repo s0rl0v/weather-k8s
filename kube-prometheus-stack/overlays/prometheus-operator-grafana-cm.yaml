@@ -16,5 +16,5 @@ data:
     enabled = true
 kind: ConfigMap
 metadata:
-  name: prometheus-operator-grafana
-  namespace: prometheus-operator
+  name: kube-prometheus-stack-grafana
+  namespace: monitoring
