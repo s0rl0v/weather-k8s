@@ -7,5 +7,6 @@ resources:
   - base/argocd-image-updater.yaml
   - base/aws-load-balancer-controller.yaml
   - base/external-secrets.yaml
+  - base/prometheus-operator.yaml
 
 namespace: argocd
