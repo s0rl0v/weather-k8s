@@ -1,0 +1,13 @@
+autoDiscovery:
+  clusterName: sorlov-sandbox
+
+rbac:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::092592202483:role/AmazonEKSClusterAutoscalerPolicy
+
+extraArgs:
+  expander: "least-waste"
+  skip-nodes-with-local-storage: false
+
+awsRegion: us-east-1
