@@ -1,5 +1,8 @@
 # ArgoCD configurations repo
 
+![ArgoCD](static/argocd.png?raw=true "ArgoCD")
+![Prometheus](static/prometheus.png?raw=true "Prometheus")
+
 This repository contains ArgiCD configuration scripts to boostrap kubernetes cluster with:
 * self-managing ArgoCD
 * AWS Load Balancer controller
