@@ -1,8 +1,13 @@
 # ArgoCD configurations repo
 
-This repository contains manifests to boostrap kubernetes cluster with self-managing ArgoCD as well as with AWS Load Balancer controller, External Secrets, ArgoCD image uploader. Weather-app deployment also happens there.
+This repository contains manifests to boostrap kubernetes cluster with:
+* self-managing ArgoCD
+* AWS Load Balancer controller
+* External Secrets
+* ArgoCD image uploader
+* [Weather-app](/https://github.com/s0rl0v/weather-app) deployment also happens there.
 
-`apps-registry` directory contains ArgoCD apps, other respective folders contain configurations for the apps deployment.
+`apps-bootstrap` directory contains ArgoCD apps, `apps-live` directory is dedicated for workloads.
 
 Kustomization manifests are used to compose the desired configuration.
 
@@ -10,10 +15,12 @@ Helm chart for `weather-backend` application is [here](/weather-backend/charts/w
 
 # Usage
 
-Initializa apps with the following command - any further changes will be reconsiled by ArgoCD
+Initialize apps with the following command - any further changes will be reconsiled by ArgoCD
 
 ```
-# cd app-registry
+# cd app-bootstrap/
+# kustomize build | kubectl apply -f -
+# cd app-live/
 # kustomize build | kubectl apply -f -
 ```
 
